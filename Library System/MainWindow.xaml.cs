@@ -515,6 +515,3 @@ namespace Library_System {
         }
     }
 }
-
-//List<T> less = list.Where(x => Comparer<object>.Default.Compare(property.GetValue(x), property.GetValue(pivot)) < 0).ToList();
-//List<T> greater = list.Where(x => Comparer<object>.Default.Compare(property.GetValue(x), property.GetValue(pivot)) > 0).ToList();
