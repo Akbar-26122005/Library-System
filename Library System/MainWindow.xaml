@@ -1,4 +1,4 @@
-﻿<Window x:Class="Library_System.MainWindow"
+<Window x:Class="Library_System.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -30,7 +30,8 @@
                     </StackPanel>
                     <StackPanel x:Name="btnsOperations" Orientation="Vertical" Margin="5">
                         <Button Content="Operations" FontSize="15" IsEnabled="False"/>
-                        <Button x:Name="btnSortData" Content="Sort" FontSize="15">
+                        <Button x:Name="btnSortData" Content="Sort" FontSize="15"
+                                Click="btnSortData_Click">
                             <Button.ContextMenu>
                                 <ContextMenu x:Name="contextMenuSortData" Opened="contextMenuSortData_Opened">
                                     <MenuItem Header=""/>
@@ -38,7 +39,6 @@
                             </Button.ContextMenu>
                         </Button>
                         <Button x:Name="btnFilterData" Content="Filter" FontSize="15"/>
-                        <Button x:Name="btnSearchData" Content="Search" FontSize="15"/>
                     </StackPanel>
                 </StackPanel>
             </ScrollViewer>
@@ -78,6 +78,10 @@
                     </StackPanel>
                 </Grid>
             </Border>
+            <Popup.Effect>
+                <DropShadowEffect Color="Black" BlurRadius="12"
+                                  Opacity="0.5" ShadowDepth="5"/>
+            </Popup.Effect>
         </Popup>
     </Grid>
 </Window>
